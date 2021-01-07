@@ -1,3 +1,4 @@
+import Table from "./components/Table";
 import "./styles.css";
 import { getLiteratureData } from "./utils";
 
@@ -19,29 +20,10 @@ function App() {
         <h2>List of Literature</h2>
       </header>
       <main>
-        <ul>
-          {listOfLiterature.map((item) => {
-            const {
-              author,
-              title,
-              publisher,
-              episodeTitle,
-              episodePubDate,
-            } = item;
-            return (
-              <li>
-                {author}
-                <br />
-                {title}
-                <br />
-                {publisher}
-                <br />
-                mentioned in "{episodeTitle}" on{" "}
-                {new Date(episodePubDate).toLocaleDateString()}
-              </li>
-            );
-          })}
-        </ul>
+        <Table
+          data={listOfLiterature}
+          columns={["author", "title", "publisher", "episodeTitle"]}
+        />
       </main>
       <footer>Footer</footer>
     </div>
