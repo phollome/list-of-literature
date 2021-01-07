@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import { getLiteratureData } from "./utils";
 
 function App() {
+  const listOfLiterature = getLiteratureData();
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>
+          <a
+            href="https://www.youtube.com/c/Wohlstandf%C3%BCrAlle/featured"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Wohlstand für alle
+          </a>
+        </h1>
+        <h2>List of Literature</h2>
       </header>
+      <main>
+        <ul>
+          {listOfLiterature.map((item) => {
+            const {
+              author,
+              title,
+              publisher,
+              episodeTitle,
+              episodePubDate,
+            } = item;
+            return (
+              <li>
+                {author}
+                <br />
+                {title}
+                <br />
+                {publisher}
+                <br />
+                mentioned in "{episodeTitle}" on{" "}
+                {new Date(episodePubDate).toLocaleDateString()}
+              </li>
+            );
+          })}
+        </ul>
+      </main>
+      <footer>Footer</footer>
     </div>
   );
 }
