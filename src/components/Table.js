@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Fuse from "fuse.js";
 
 function getColumns(data) {
   return data.reduce((arr, item) => {
@@ -13,10 +14,12 @@ const SortTypes = {
 };
 
 function Table(props) {
-  const { data, columns = getColumns(data) } = props;
+  const { data, columns = getColumns(data), searchString = "" } = props;
   const [sortKey, setSortKey] = useState();
   const [sortType, setSortType] = useState();
   const [sortedData, setSortedData] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
+  const fuse = useRef(null);
 
   useEffect(() => {
     setSortType(SortTypes.Descending);
@@ -24,17 +27,35 @@ function Table(props) {
 
   useEffect(() => {
     if (sortKey === undefined) {
-      setSortedData([...data]);
+      setSortedData([...searchResult]);
     } else {
       setSortedData(
-        [...data].sort((a, b) =>
+        [...searchResult].sort((a, b) =>
           sortType === SortTypes.Descending
             ? a[sortKey].localeCompare(b[sortKey])
             : b[sortKey].localeCompare(a[sortKey])
         )
       );
     }
-  }, [data, sortKey, sortType]);
+  }, [searchResult, sortKey, sortType]);
+
+  useEffect(() => {
+    if (data.length > 0) {
+      fuse.current = new Fuse(data, {
+        keys: columns,
+        minMatchCharLength: 2,
+      });
+    }
+  }, [data, columns]);
+
+  useEffect(() => {
+    if (searchString.length > 2 && fuse.current !== null && data.length > 0) {
+      const result = fuse.current.search(searchString);
+      setSearchResult([...result.map((elem) => elem.item)]);
+    } else if (searchResult.length !== data.length) {
+      setSearchResult([...data]);
+    }
+  }, [searchString, data]); // eslint-disable-line
 
   const handleColumnSelect = (key) => {
     if (key !== sortKey) {

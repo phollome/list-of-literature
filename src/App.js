@@ -1,3 +1,4 @@
+import Search from "./components/Search";
 import Table from "./components/Table";
 import "./styles.css";
 import { getLiteratureData } from "./utils";
@@ -20,10 +21,12 @@ function App() {
         <h2>List of Literature</h2>
       </header>
       <main>
-        <Table
-          data={listOfLiterature}
-          columns={["author", "title", "publisher", "episodeTitle"]}
-        />
+        <Search>
+          <Table
+            data={listOfLiterature}
+            columns={["author", "title", "publisher", "episodeTitle"]}
+          />
+        </Search>
       </main>
       <footer>Footer</footer>
     </div>
