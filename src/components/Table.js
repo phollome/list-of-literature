@@ -72,7 +72,7 @@ function Table(props) {
     <table>
       <thead>
         <tr>
-          {columns.map((key, idx) => {
+          {columns.map((key, idx, arr) => {
             let content = key;
             if (sortKey === key) {
               if (sortType === SortTypes.Descending) {
@@ -84,7 +84,7 @@ function Table(props) {
             return (
               <th
                 key={idx}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer", width: `${100 / arr.length}%` }}
                 onClick={() => handleColumnSelect(key)}
               >
                 {content}
