@@ -1,6 +1,6 @@
 import Search from "./components/Search";
 import Table from "./components/Table";
-import "./styles.css";
+import "./index.css";
 import { getLiteratureData } from "./utils";
 
 function App() {
