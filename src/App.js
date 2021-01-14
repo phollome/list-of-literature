@@ -9,7 +9,7 @@ import LanguageSwitch from "./components/LanguageSwitch";
 function App() {
   const { t } = useTranslation();
 
-  const listOfLiterature = getLiteratureData();
+  const { title, link, list } = getLiteratureData();
 
   return (
     <div className="w-full bg-white dark:bg-gray-900">
@@ -18,22 +18,22 @@ function App() {
           <div className="text-right">
             <LanguageSwitch />
           </div>
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-4xl font-bold">{t("listOfLiterature")}</h1>
+          <h2 className="text-xl">
             <a
-              href="https://www.youtube.com/c/Wohlstandf%C3%BCrAlle/featured"
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
               className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400"
             >
-              Wohlstand für alle
+              {title}
             </a>
-          </h1>
-          <h2 className="text-xl">{t("listOfLiterature")}</h2>
+          </h2>
         </header>
         <main>
           <Search>
             <Table
-              data={listOfLiterature}
+              data={list}
               columns={["author", "title", "publisher", "episodeTitle"]}
             />
           </Search>
