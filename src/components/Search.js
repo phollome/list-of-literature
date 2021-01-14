@@ -18,13 +18,18 @@ function Search(props) {
 
   return (
     <>
-      <label htmlFor="search">search: </label>
-      <input
-        onChange={handleChange}
-        id="search"
-        type="text"
-        autoComplete="off"
-      />
+      <div className="flex m-2 p-2 overflow-hidden">
+        <label className="mr-2" htmlFor="search">
+          search
+        </label>
+        <input
+          className="w-full border-b-2 focus:outline-none focus:border-blue-800"
+          id="search"
+          type="text"
+          autoComplete="off"
+          onChange={handleChange}
+        />
+      </div>
       {elements}
     </>
   );

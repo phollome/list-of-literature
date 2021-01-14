@@ -69,9 +69,9 @@ function Table(props) {
   };
 
   return (
-    <table>
+    <table className="m-2 border-2">
       <thead>
-        <tr>
+        <tr className="border">
           {columns.map((key, idx, arr) => {
             let content = key;
             if (sortKey === key) {
@@ -84,10 +84,15 @@ function Table(props) {
             return (
               <th
                 key={idx}
-                style={{ cursor: "pointer", width: `${100 / arr.length}%` }}
                 onClick={() => handleColumnSelect(key)}
+                className={`w-1/${arr.length} p-1`}
               >
-                {content}
+                <button
+                  type="button"
+                  className="cursor-pointer font-bold focus:outline-none focus:text-blue-800"
+                >
+                  {content}
+                </button>
               </th>
             );
           })}
@@ -96,9 +101,13 @@ function Table(props) {
       <tbody>
         {sortedData.map((item, idx) => {
           return (
-            <tr key={idx}>
+            <tr key={idx} className="border odd:bg-gray-100">
               {columns.map((column, i) => {
-                return <td key={i}>{item[column]}</td>;
+                return (
+                  <td key={i} className="p-1">
+                    {item[column]}
+                  </td>
+                );
               })}
             </tr>
           );

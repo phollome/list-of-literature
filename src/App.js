@@ -8,17 +8,18 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
+      <header className="p-4 text-center">
+        <h1 className="text-4xl font-bold">
           <a
             href="https://www.youtube.com/c/Wohlstandf%C3%BCrAlle/featured"
             target="_blank"
             rel="noopener noreferrer"
+            className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800"
           >
             Wohlstand für alle
           </a>
         </h1>
-        <h2>List of Literature</h2>
+        <h2 className="text-xl">List of Literature</h2>
       </header>
       <main>
         <Search>
