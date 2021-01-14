@@ -3,18 +3,19 @@ import { useTranslation } from "react-i18next";
 function LanguageSwitch() {
   const { i18n } = useTranslation();
 
-  const language = i18n.language || "en";
-
-  const handleLanguageSwitch = () => {
-    i18n.changeLanguage(language === "en" ? "de" : "en");
+  const handleLanguageSwitch = (lang) => {
+    i18n.changeLanguage(lang === "en" ? "de" : "en");
   };
+
+  const language =
+    i18n.language === "en" || i18n.language.startsWith("en-") ? "en" : "de";
 
   return (
     <button
-      data-testId="language-switch"
+      data-testid="language-switch"
       type="button"
       className="focus:outline-none focus:underline hover:underline"
-      onClick={handleLanguageSwitch}
+      onClick={() => handleLanguageSwitch(language)}
     >
       {language === "en" ? "🇬🇧" : "🇩🇪"}
     </button>
