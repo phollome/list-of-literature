@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Search(props) {
   const { children } = props;
   const [value, setValue] = useState();
+  const { t } = useTranslation();
 
   const handleChange = (evt) => {
     setValue(evt.target.value);
@@ -20,7 +22,7 @@ function Search(props) {
     <>
       <div className="flex m-2 p-2 overflow-hidden">
         <label className="mr-2" htmlFor="search">
-          search
+          {t("search")}
         </label>
         <input
           className="w-full border-b-2 bg-transparent focus:outline-none focus:border-blue-800 dark:border-gray-600 dark:focus:border-blue-400"

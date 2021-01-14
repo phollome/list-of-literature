@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Fuse from "fuse.js";
+import { useTranslation } from "react-i18next";
 
 function getColumns(data) {
   return data.reduce((arr, item) => {
@@ -20,6 +21,7 @@ function Table(props) {
   const [sortedData, setSortedData] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
   const fuse = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setSortType(SortTypes.Descending);
@@ -73,7 +75,7 @@ function Table(props) {
       <thead>
         <tr className="border dark:border-gray-600">
           {columns.map((key, idx, arr) => {
-            let content = key;
+            let content = t(key);
             if (sortKey === key) {
               if (sortType === SortTypes.Descending) {
                 content += "⬆";

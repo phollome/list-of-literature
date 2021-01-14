@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
 import Search from "./components/Search";
 import Table from "./components/Table";
 import "./index.css";
+import "./i18n";
 import { getLiteratureData } from "./utils";
 
 function App() {
+  const { t } = useTranslation();
+
   const listOfLiterature = getLiteratureData();
 
   return (
@@ -19,7 +23,7 @@ function App() {
             Wohlstand für alle
           </a>
         </h1>
-        <h2 className="text-xl">List of Literature</h2>
+        <h2 className="text-xl">{t("listOfLiterature")}</h2>
       </header>
       <main>
         <Search>
