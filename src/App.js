@@ -4,6 +4,7 @@ import Table from "./components/Table";
 import "./index.css";
 import "./i18n";
 import { getLiteratureData } from "./utils";
+import LanguageSwitch from "./components/LanguageSwitch";
 
 function App() {
   const { t } = useTranslation();
@@ -13,6 +14,9 @@ function App() {
   return (
     <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-300">
       <header className="p-4 text-center">
+        <div className="text-right">
+          <LanguageSwitch />
+        </div>
         <h1 className="text-4xl font-bold">
           <a
             href="https://www.youtube.com/c/Wohlstandf%C3%BCrAlle/featured"
