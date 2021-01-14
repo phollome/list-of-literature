@@ -12,7 +12,7 @@ function App() {
   const { title, link, list } = getLiteratureData();
 
   return (
-    <div className="w-full bg-white dark:bg-gray-900">
+    <div className="w-full min-h-screen bg-white dark:bg-gray-900">
       <div className="m-auto min-w-min max-w-7xl text-gray-900 dark:text-gray-300">
         <header className="p-4 text-center">
           <div className="text-right">
