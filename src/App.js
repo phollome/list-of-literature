@@ -7,14 +7,14 @@ function App() {
   const listOfLiterature = getLiteratureData();
 
   return (
-    <div className="App">
+    <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-300">
       <header className="p-4 text-center">
         <h1 className="text-4xl font-bold">
           <a
             href="https://www.youtube.com/c/Wohlstandf%C3%BCrAlle/featured"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800"
+            className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400"
           >
             Wohlstand für alle
           </a>

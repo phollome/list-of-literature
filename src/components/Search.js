@@ -23,7 +23,7 @@ function Search(props) {
           search
         </label>
         <input
-          className="w-full border-b-2 focus:outline-none focus:border-blue-800"
+          className="w-full border-b-2 bg-transparent focus:outline-none focus:border-blue-800 dark:border-gray-600 dark:focus:border-blue-400"
           id="search"
           type="text"
           autoComplete="off"
