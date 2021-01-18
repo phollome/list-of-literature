@@ -80,9 +80,9 @@ function Table(props) {
             let content = t(key);
             if (sortKey === key) {
               if (sortType === SortTypes.Descending) {
-                content += "⬆";
+                content += " ⬆";
               } else {
-                content += "⬇";
+                content += " ⬇";
               }
             }
             return (
