@@ -9,7 +9,7 @@ import LanguageSwitch from "./components/LanguageSwitch";
 import { useReferences } from "./hooks";
 
 function App(props) {
-  const { dataId } = props;
+  const { dataId, mail } = props;
 
   const { title, link, references } = useReferences(dataId);
   const { t } = useTranslation();
@@ -48,7 +48,21 @@ function App(props) {
             />
           </Search>
         </main>
-        <footer>Footer</footer>
+        <footer className="py-2 text-center">
+          {mail !== undefined ? (
+            <>
+              <span className="mr-2" aria-label="mail icon">
+                ✉
+              </span>
+              <a
+                href={`mailto:${mail}`}
+                className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400"
+              >
+                Webmaster
+              </a>
+            </>
+          ) : null}
+        </footer>
       </div>
     </div>
   );
