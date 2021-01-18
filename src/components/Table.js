@@ -121,7 +121,7 @@ function Table(props) {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400"
+                        className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400 inline-block"
                       >
                         {item.link}
                       </a>
