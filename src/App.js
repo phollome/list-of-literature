@@ -4,6 +4,7 @@ import Search from "./components/Search";
 import Table from "./components/Table";
 import "./index.css";
 import "./i18n";
+import DarkModeSwitch from "./components/DarkModeSwitch";
 import LanguageSwitch from "./components/LanguageSwitch";
 import { useReferences } from "./hooks";
 
@@ -22,7 +23,10 @@ function App(props) {
       <div className="m-auto min-w-min max-w-7xl text-gray-900 dark:text-gray-300">
         <header className="p-4 text-center">
           <div className="text-right">
-            <LanguageSwitch />
+            <span className="mr-4">
+              <LanguageSwitch />
+            </span>
+            <DarkModeSwitch />
           </div>
           <h1 className="text-4xl font-bold">{t("listOfLiterature")}</h1>
           <h2 className="text-xl">
