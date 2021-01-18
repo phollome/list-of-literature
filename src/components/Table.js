@@ -112,7 +112,10 @@ function Table(props) {
               {columns.map((column, i) => {
                 const isLink = column === "link" && item.link !== undefined;
                 return (
-                  <td key={i} className="p-1">
+                  <td
+                    key={`${idx}-${i}`}
+                    className={`${isLink ? "break-all" : "break-normal"} p-1`}
+                  >
                     {isLink ? (
                       <a
                         href={item.link}
