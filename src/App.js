@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Search from "./components/Search";
 import Table from "./components/Table";
@@ -10,6 +11,10 @@ function App() {
   const { t } = useTranslation();
 
   const { title, link, list } = getLiteratureData();
+
+  useEffect(() => {
+    document.title = `${t("listOfLiterature")} - ${title}`;
+  }, [t, title]);
 
   return (
     <div className="w-full min-h-screen bg-white dark:bg-gray-900">
