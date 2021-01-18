@@ -1,9 +1,12 @@
 import data from "./data.json";
 
-export function getLiteratureData() {
-  const { title, link, episodes } = data[0];
+export function useReferences(dataId) {
+  const { title = "", link = "", episodes = [] } =
+    (dataId !== undefined
+      ? data.find((item) => item.id === dataId)
+      : data[0]) || {};
   // create list of literature
-  const list = episodes.reduce((arr, episode) => {
+  const references = episodes.reduce((arr, episode) => {
     const {
       id: episodeId,
       title: episodeTitle,
@@ -18,5 +21,5 @@ export function getLiteratureData() {
     }));
     return arr.concat(enhancedLiterature);
   }, []);
-  return { title, link, list };
+  return { title, link, references };
 }

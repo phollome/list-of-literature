@@ -4,13 +4,14 @@ import Search from "./components/Search";
 import Table from "./components/Table";
 import "./index.css";
 import "./i18n";
-import { getLiteratureData } from "./utils";
 import LanguageSwitch from "./components/LanguageSwitch";
+import { useReferences } from "./hooks";
 
-function App() {
+function App(props) {
+  const { dataId } = props;
+
+  const { title, link, references } = useReferences(dataId);
   const { t } = useTranslation();
-
-  const { title, link, list } = getLiteratureData();
 
   useEffect(() => {
     document.title = `${t("listOfLiterature")} - ${title}`;
@@ -38,7 +39,7 @@ function App() {
         <main>
           <Search>
             <Table
-              data={list}
+              data={references}
               columns={["author", "title", "publisher", "episodeTitle"]}
             />
           </Search>
