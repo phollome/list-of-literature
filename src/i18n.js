@@ -7,9 +7,10 @@ const resources = {
     translation: {
       listOfLiterature: "List of Literature",
       search: "Search",
-      author: "Author",
+      author: "Author/Source",
       title: "Title",
       publisher: "Publisher",
+      link: "Link",
       episodeTitle: "Episode title",
     },
   },
@@ -17,9 +18,10 @@ const resources = {
     translation: {
       listOfLiterature: "Literaturverzeichnis",
       search: "Suche",
-      author: "Autor:innen",
+      author: "Autor:innen/Quelle",
       title: "Titel",
       publisher: "Verlage",
+      link: "Link",
       episodeTitle: "Episodentitel",
     },
   },

@@ -34,7 +34,7 @@ function App() {
           <Search>
             <Table
               data={list}
-              columns={["author", "title", "publisher", "episodeTitle"]}
+              columns={["author", "title", "link", "publisher", "episodeTitle"]}
             />
           </Search>
         </main>

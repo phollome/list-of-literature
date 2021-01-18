@@ -8,9 +8,10 @@ export function getLiteratureData() {
       id: episodeId,
       title: episodeTitle,
       pubDate: episodePubDate,
-      literature,
+      literature = [],
+      online = [],
     } = episode;
-    const enhancedLiterature = literature.map((item) => ({
+    const enhancedLiterature = [...literature, ...online].map((item) => ({
       episodeId,
       episodeTitle,
       episodePubDate,

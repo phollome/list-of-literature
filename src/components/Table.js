@@ -32,11 +32,13 @@ function Table(props) {
       setSortedData([...searchResult]);
     } else {
       setSortedData(
-        [...searchResult].sort((a, b) =>
-          sortType === SortTypes.Descending
-            ? a[sortKey].localeCompare(b[sortKey])
-            : b[sortKey].localeCompare(a[sortKey])
-        )
+        [...searchResult].sort((a, b) => {
+          const aContent = a[sortKey] || "";
+          const bContent = b[sortKey] || "";
+          return sortType === SortTypes.Descending
+            ? aContent.localeCompare(bContent)
+            : bContent.localeCompare(aContent);
+        })
       );
     }
   }, [searchResult, sortKey, sortType]);
@@ -71,7 +73,7 @@ function Table(props) {
   };
 
   return (
-    <table className="m-2 border-2 dark:border-gray-600">
+    <table className="w-full m-2 border-2 dark:border-gray-600">
       <thead>
         <tr className="border dark:border-gray-600">
           {columns.map((key, idx, arr) => {
@@ -108,9 +110,21 @@ function Table(props) {
               className="border odd:bg-gray-100 dark:odd:bg-gray-800 dark:border-gray-600"
             >
               {columns.map((column, i) => {
+                const isLink = column === "link" && item.link !== undefined;
                 return (
                   <td key={i} className="p-1">
-                    {item[column]}
+                    {isLink ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400"
+                      >
+                        {item.link}
+                      </a>
+                    ) : (
+                      item[column]
+                    )}
                   </td>
                 );
               })}
