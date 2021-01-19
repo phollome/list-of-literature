@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useDarkMode } from "../hooks";
 
 function DarkModeSwitch() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { t } = useTranslation();
 
   const handleDarkModeSwitch = () => {
     toggleDarkMode();
@@ -10,6 +12,7 @@ function DarkModeSwitch() {
   return (
     <button
       data-testid="language-switch"
+      aria-label={t("toggleDarkMode")}
       type="button"
       className="focus:outline-none focus:underline hover:underline"
       onClick={() => handleDarkModeSwitch()}

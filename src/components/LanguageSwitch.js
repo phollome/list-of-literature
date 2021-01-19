@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 function LanguageSwitch() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const handleLanguageSwitch = (lang) => {
     i18n.changeLanguage(lang === "en" ? "de" : "en");
@@ -13,6 +13,7 @@ function LanguageSwitch() {
   return (
     <button
       data-testid="language-switch"
+      aria-label={t("switchLanguage")}
       type="button"
       className="focus:outline-none focus:underline hover:underline"
       onClick={() => handleLanguageSwitch(language)}

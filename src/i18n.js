@@ -11,6 +11,8 @@ const resources = {
       title: "Title",
       publisher: "Publisher/Source",
       episodeTitle: "Episode title",
+      switchLanguage: "Switch language",
+      toggleDarkMode: "Toggle dark mode",
     },
   },
   de: {
@@ -21,6 +23,8 @@ const resources = {
       title: "Titel",
       publisher: "Verlage/Quelle",
       episodeTitle: "Episodentitel",
+      switchLanguage: "Sprache wechseln",
+      toggleDarkMode: "Dark Mode an-/ausschalten",
     },
   },
 };
