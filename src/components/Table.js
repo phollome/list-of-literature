@@ -73,7 +73,7 @@ function Table(props) {
   };
 
   return (
-    <table className="w-full m-2 border-2 dark:border-gray-600">
+    <table className="w-full p-2 border-2 dark:border-gray-600">
       <thead>
         <tr className="border dark:border-gray-600">
           {columns.map((key, idx, arr) => {

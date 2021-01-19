@@ -40,7 +40,7 @@ function App(props) {
             </a>
           </h2>
         </header>
-        <main>
+        <main className="m-2">
           <Search>
             <Table
               data={references}
