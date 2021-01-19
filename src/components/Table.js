@@ -89,7 +89,7 @@ function Table(props) {
               <th
                 key={idx}
                 onClick={() => handleColumnSelect(key)}
-                className={`w-1/${arr.length} p-1`}
+                className="workaround-column-width-issue p-1"
               >
                 <button
                   type="button"
