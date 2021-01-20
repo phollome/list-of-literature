@@ -9,7 +9,7 @@ import LanguageSwitch from "./components/LanguageSwitch";
 import { useReferences } from "./hooks";
 
 function App(props) {
-  const { dataId, mail } = props;
+  const { dataId, mail, imprint } = props;
 
   const { title, link, references } = useReferences(dataId);
   const { t } = useTranslation();
@@ -59,6 +59,18 @@ function App(props) {
                 className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400"
               >
                 Webmaster
+              </a>
+            </>
+          ) : null}
+          {imprint !== undefined ? (
+            <>
+              <a
+                href={imprint}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400"
+              >
+                {t("imprint")}
               </a>
             </>
           ) : null}

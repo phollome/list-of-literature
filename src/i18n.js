@@ -13,6 +13,7 @@ const resources = {
       episodeTitle: "Episode title",
       switchLanguage: "Switch language",
       toggleDarkMode: "Toggle dark mode",
+      imprint: "Imprint"
     },
   },
   de: {
@@ -25,6 +26,7 @@ const resources = {
       episodeTitle: "Episodentitel",
       switchLanguage: "Sprache wechseln",
       toggleDarkMode: "Dark Mode an-/ausschalten",
+      imprint: "Impressum"
     },
   },
 };
