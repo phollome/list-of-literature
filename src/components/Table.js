@@ -76,7 +76,7 @@ function Table(props) {
     <table className="w-full p-2 border-2 dark:border-gray-600">
       <thead>
         <tr className="border dark:border-gray-600">
-          {columns.map((key, idx, arr) => {
+          {columns.map((key, idx) => {
             let content = t(key);
             if (sortKey === key) {
               if (sortType === SortTypes.Descending) {
@@ -89,7 +89,7 @@ function Table(props) {
               <th
                 key={idx}
                 onClick={() => handleColumnSelect(key)}
-                className="workaround-column-width-issue p-1"
+                className="w-1/4 p-1"
               >
                 <button
                   type="button"
