@@ -5,6 +5,26 @@
     "link": "https://www.youtube.com/c/Wohlstandf%C3%BCrAlle/featured",
     "episodes": [
       {
+        "id": 1011,
+        "title": "Spezial #11: Katharina Pistor über Corona-Impfstoffe und den Rechtscode des Kapitals",
+        "pubDate": "Sat, 23 Jan 2021 08:00:00 +0000",
+        "description": "Kaum ein Begriff ist in ökonomischen Debatten so allgegenwärtig wie der des Kapitals. Doch was ist #Kapital überhaupt, und vor allem: Wie entsteht es? Und was hat die Einhegung der britischen Commons mit Corona-Impfstoffen zu tun? \nDas (und vieles mehr) erklärt die Juristin Katharina #Pistor im elften WfA-Spezial. \n\nLiteratur:\n\nKatharina Pistor: Der Code des Kapitals. Wie das Recht Reichtum und Ungleichheit schafft, Suhrkamp. \n\nKarl Marx: Das Kapital. Kritik der politischen Ökonomie. Erster Band, Dietz.\n\nIhr könnt uns unterstützen - herzlichen Dank! \nPaypal: https://www.paypal.me/oleundwolfgang\nWolfgang M. Schmitt, Ole Nymoen \nBetreff: Wohlstand fuer Alle \nIBAN: DE67 5745 0120 0130 7996 12 \nBIC: MALADE51NWD\n\nTwitter: \nOle: twitter.com/nymoen_ole \nWolfgang: twitter.com/SchmittJunior",
+        "references": [
+          {
+            "author": "Katharina Pistor",
+            "title": "Der Code des Kapitals. Wie das Recht Reichtum und Ungleichheit schafft",
+            "item": "Katharina Pistor: Der Code des Kapitals. Wie das Recht Reichtum und Ungleichheit schafft, Suhrkamp. ",
+            "publisher": "Suhrkamp"
+          },
+          {
+            "author": "Karl Marx",
+            "title": "Das Kapital. Kritik der politischen Ökonomie. Erster Band",
+            "item": "Karl Marx: Das Kapital. Kritik der politischen Ökonomie. Erster Band, Dietz.",
+            "publisher": "Dietz"
+          }
+        ]
+      },
+      {
         "id": 76,
         "title": "Ep. 76: Hochfrequenzhandel - jede Millisekunde zählt!",
         "pubDate": "Wed, 20 Jan 2021 05:00:00 +0000",
