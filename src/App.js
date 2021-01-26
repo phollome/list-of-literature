@@ -19,7 +19,7 @@ function App(props) {
   }, [t, title]);
 
   return (
-    <div className="w-full min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-w-min min-h-screen bg-white dark:bg-gray-900">
       <div className="m-auto min-w-min max-w-7xl text-gray-900 dark:text-gray-300">
         <header className="p-4 text-center">
           <div className="text-right">
