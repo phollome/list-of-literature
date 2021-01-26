@@ -30,7 +30,11 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:jsx-a11y/strict"
+    ],
+    "plugins": [
+      "jsx-a11y"
     ]
   },
   "browserslist": {
@@ -44,5 +48,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1"
   }
 }
