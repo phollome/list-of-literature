@@ -20,10 +20,8 @@ function Search(props) {
 
   return (
     <>
-      <div className="flex m-2 p-2 overflow-hidden">
-        <label className="mr-2" htmlFor="search">
-          {t("search")}
-        </label>
+      <label className="flex m-2 p-2 overflow-hidden" htmlFor="search">
+        <p className="mr-2">{t("search")}</p>
         <input
           className="w-full border-b-2 bg-transparent focus:outline-none focus:border-blue-800 dark:border-gray-600 dark:focus:border-blue-400"
           id="search"
@@ -31,7 +29,7 @@ function Search(props) {
           autoComplete="off"
           onChange={handleChange}
         />
-      </div>
+      </label>
       {elements}
     </>
   );
