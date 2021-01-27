@@ -15,7 +15,7 @@ const SortTypes = {
 };
 
 function Table(props) {
-  const { data, columns = getColumns(data), searchString = "" } = props;
+  const { data, columns = getColumns(data), filterString = "" } = props;
   const [sortKey, setSortKey] = useState();
   const [sortType, setSortType] = useState();
   const [sortedData, setSortedData] = useState([]);
@@ -53,13 +53,13 @@ function Table(props) {
   }, [data, columns]);
 
   useEffect(() => {
-    if (searchString.length > 2 && fuse.current !== null && data.length > 0) {
-      const result = fuse.current.search(searchString);
+    if (filterString.length > 2 && fuse.current !== null && data.length > 0) {
+      const result = fuse.current.search(filterString);
       setSearchResult([...result.map((elem) => elem.item)]);
     } else if (searchResult.length !== data.length) {
       setSearchResult([...data]);
     }
-  }, [searchString, data]); // eslint-disable-line
+  }, [filterString, data]); // eslint-disable-line
 
   const handleColumnSelect = (key) => {
     if (key !== sortKey) {

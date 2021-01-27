@@ -6,27 +6,27 @@ const resources = {
   en: {
     translation: {
       listOfLiterature: "List of Literature",
-      search: "Search",
+      filter: "Filter",
       author: "Authors",
       title: "Title",
       publisher: "Publisher/Source",
       episodeTitle: "Episode title",
       switchLanguage: "Switch language",
       toggleDarkMode: "Toggle dark mode",
-      imprint: "Imprint"
+      imprint: "Imprint",
     },
   },
   de: {
     translation: {
       listOfLiterature: "Literaturverzeichnis",
-      search: "Suche",
+      filter: "Filter",
       author: "Autor:innen",
       title: "Titel",
       publisher: "Verlage/Quelle",
       episodeTitle: "Episodentitel",
       switchLanguage: "Sprache wechseln",
       toggleDarkMode: "Dark Mode an-/ausschalten",
-      imprint: "Impressum"
+      imprint: "Impressum",
     },
   },
 };
