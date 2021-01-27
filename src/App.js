@@ -18,6 +18,8 @@ function App(props) {
     document.title = `${t("listOfLiterature")} - ${title}`;
   }, [t, title]);
 
+  const columns = ["author", "title", "publisher", "episodeTitle"];
+
   return (
     <div className="min-w-min min-h-screen bg-white dark:bg-gray-900">
       <div className="m-auto min-w-min max-w-7xl text-gray-900 dark:text-gray-300">
@@ -41,11 +43,8 @@ function App(props) {
           </h2>
         </header>
         <main className="m-2">
-          <Search>
-            <Table
-              data={references}
-              columns={["author", "title", "publisher", "episodeTitle"]}
-            />
+          <Search fields={columns}>
+            <Table data={references} columns={columns} />
           </Search>
         </main>
         <footer className="py-2 text-center">
