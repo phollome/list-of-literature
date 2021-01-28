@@ -11,7 +11,7 @@ function DarkModeSwitch() {
 
   return (
     <button
-      data-testid="language-switch"
+      data-testid="dark-mode-switch"
       aria-label={t("toggleDarkMode")}
       type="button"
       className="focus:outline-none focus:underline hover:underline"
