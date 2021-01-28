@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import Search from "./components/Search";
+import Filter from "./components/Filter";
 import Table from "./components/Table";
 import "./index.css";
 import "./i18n";
@@ -43,9 +43,9 @@ function App(props) {
           </h2>
         </header>
         <main className="m-2">
-          <Search fields={columns}>
+          <Filter fields={columns}>
             <Table data={references} columns={columns} />
-          </Search>
+          </Filter>
         </main>
         <footer className="py-2 text-center">
           {mail !== undefined ? (
