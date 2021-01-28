@@ -25,7 +25,8 @@
     "build": "craco build",
     "prebuild": "yarn test --watchAll=false",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "codecov": "codecov"
   },
   "browserslist": {
     "production": [
