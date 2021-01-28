@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-function Search(props) {
+function Filter(props) {
   const { fields = [], children } = props;
   const [value, setValue] = useState();
   const { t } = useTranslation();
@@ -38,4 +38,4 @@ function Search(props) {
   );
 }
 
-export default Search;
+export default Filter;
