@@ -22,11 +22,12 @@ function Filter(props) {
 
   return (
     <>
-      <label className="flex m-2 p-2 overflow-hidden" htmlFor="filter">
+      <label className="flex m-2 p-2 overflow-hidden" htmlFor="filter-input">
         <p className="mr-2">{t("filter")}</p>
         <input
           className="w-full border-b-2 bg-transparent focus:outline-none focus:border-blue-800 dark:border-gray-600 dark:focus:border-blue-400 placeholder-gray-300 dark:placeholder-gray-600"
-          id="filter"
+          id="filter-input"
+          data-testid="filter-input"
           type="text"
           placeholder={placeholder}
           autoComplete="off"
