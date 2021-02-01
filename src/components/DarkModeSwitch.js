@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useDarkMode } from "../hooks";
+import { useDarkMode } from "@phollome/react-hooks";
 
 function DarkModeSwitch() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();

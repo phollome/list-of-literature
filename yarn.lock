@@ -1428,6 +1428,11 @@
   dependencies:
     mkdirp "^1.0.4"
 
+"@phollome/react-hooks@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@phollome/react-hooks/-/react-hooks-0.1.2.tgz#24eaeba0cb1e45253ebb304a8b889258d9d6f771"
+  integrity sha512-mVBwlWWs3D6OhOiwXEBFVb5wXBKTVBp7KGCZi+Auun+9Ib0y90pGtbRGM2be7h3jx5rqeGbIRerdGf8PEDW5xw==
+
 "@pmmmwh/react-refresh-webpack-plugin@0.4.2":
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.4.2.tgz#1f9741e0bde9790a0e13272082ed7272a083620d"
