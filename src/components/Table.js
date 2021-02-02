@@ -110,17 +110,17 @@ function Table(props) {
               className="border odd:bg-gray-100 dark:odd:bg-gray-800 dark:border-gray-600"
             >
               {columns.map((column, i) => {
-                const hasLink = column === "title" && item.link !== undefined;
+                const hasLink = column === "episodeTitle" && item.episodeLink;
                 return (
                   <td key={`${idx}-${i}`} className="p-1">
                     {hasLink ? (
                       <a
-                        href={item.link}
+                        href={item.episodeLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="underline focus:outline-none hover:text-blue-800 focus:text-blue-800 dark:hover:text-blue-400 dark:focus:text-blue-400 inline-block"
                       >
-                        {item.title}
+                        {item.episodeTitle}
                       </a>
                     ) : (
                       item[column]

@@ -11,12 +11,14 @@ export function useReferences(dataId) {
       id: episodeId,
       title: episodeTitle,
       pubDate: episodePubDate,
+      href: episodeLink,
       references = [],
     } = episode;
     const enhancedLiterature = references.map((item) => ({
       episodeId,
       episodeTitle,
       episodePubDate,
+      episodeLink,
       ...item,
     }));
     return arr.concat(enhancedLiterature);
